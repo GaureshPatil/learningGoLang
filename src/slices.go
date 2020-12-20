@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func main() {
@@ -19,8 +20,8 @@ func main() {
 	fmt.Println(colors)
 
 	number := make([]int, 5, 5)
-	number[0] = 1
-	number[1] = 7
+	number[0] = 134
+	number[1] = 72
 	number[2] = 32
 	number[3] = 12
 	number[4] = 156
@@ -30,5 +31,8 @@ func main() {
 	fmt.Println(number)
 
 	fmt.Println(cap(number))
+
+	sort.Ints(number)
+	fmt.Println(number)
 
 }
