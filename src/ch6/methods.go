@@ -15,9 +15,9 @@ func (d Dog) speak() {
 	fmt.Println(d.Sound)
 }
 
-func (d Dog) SpeakThreeTimes() {
-	d.Sound = fmt.Sprintf("%v! %v! %v!\n", d.Sound, d.Sound, d.Sound)
-	fmt.Print(d.Sound)
+func (d *Dog) SpeakThreeTimes() {
+	d.Sound = fmt.Sprintf("%v! %v! %v!", d.Sound, d.Sound, d.Sound)
+	fmt.Println(d.Sound)
 }
 
 func main() {
